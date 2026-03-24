@@ -1,0 +1,27 @@
+# Ruslanas Fiodorovas - Real Estate Expert
+
+> Premium real estate agent platform with strategic operations, asset inventory, market intelligence, and advisory services.
+
+## Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 16 (App Router) |
+| Styling | Tailwind CSS v4 |
+| Language | TypeScript |
+| Font | Manrope |
+| Design | Light mode, editorial authority, 0px border-radius |
+
+## Stitch AI
+
+- **Project ID:** 8914609241120891332
+- **Screens:** 32 (mobile + desktop)
+- **Design theme:** Light mode, Manrope body, graphite/gold/slate palette
+
+## Commands
+
+```bash
+npm run dev      # Development server
+npm run build    # Production build
+npm run lint     # ESLint
+```
