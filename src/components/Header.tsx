@@ -14,19 +14,19 @@ export default function Header() {
             href="/market-intelligence"
             className="text-on-surface-variant text-[11px] tracking-widest uppercase hover:text-on-surface transition-colors"
           >
-            STRATEGY
+            STRATEGIJA
           </Link>
           <Link
             href="/asset-inventory"
             className="text-on-surface-variant text-[11px] tracking-widest uppercase hover:text-on-surface transition-colors"
           >
-            ASSETS
+            TURTAS
           </Link>
           <Link
             href="/advisory"
             className="text-on-surface-variant text-[11px] tracking-widest uppercase hover:text-on-surface transition-colors"
           >
-            ADVISORY
+            KONSULTACIJOS
           </Link>
         </nav>
       </div>

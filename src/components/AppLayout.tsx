@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 interface AppLayoutProps {
   children: React.ReactNode;
-  activeItem: "COMMAND" | "STRATEGY" | "ASSETS" | "ADVISORY" | "ARCHIVE";
+  activeItem: "VALDYMAS" | "STRATEGIJA" | "TURTAS" | "KONSULTACIJOS" | "ARCHYVAS";
 }
 
 export default function AppLayout({ children, activeItem }: AppLayoutProps) {

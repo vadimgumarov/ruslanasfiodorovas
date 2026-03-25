@@ -1,25 +1,25 @@
 import AppLayout from "@/components/AppLayout";
 
 const neighborhoodData = [
-  { id: "CENTRAS_S1", velocity: "+8.2%", volume: "342", avgPrice: "\u20AC3,840/m\u00B2", trend: "up" },
-  { id: "SENAMIESTIS_A", velocity: "+5.1%", volume: "187", avgPrice: "\u20AC4,920/m\u00B2", trend: "up" },
-  { id: "NAUJAMIESTIS_D3", velocity: "-1.4%", volume: "256", avgPrice: "\u20AC2,680/m\u00B2", trend: "down" },
-  { id: "ZIRMUNAI_B2", velocity: "+3.7%", volume: "198", avgPrice: "\u20AC2,150/m\u00B2", trend: "up" },
-  { id: "ANTAKALNIS_C1", velocity: "+6.3%", volume: "124", avgPrice: "\u20AC3,210/m\u00B2", trend: "up" },
+  { id: "CENTRAS_S1", velocity: "+8,2%", volume: "342", avgPrice: "\u20AC3 840/m\u00B2", trend: "up" },
+  { id: "SENAMIESTIS_A", velocity: "+5,1%", volume: "187", avgPrice: "\u20AC4 920/m\u00B2", trend: "up" },
+  { id: "NAUJAMIESTIS_D3", velocity: "-1,4%", volume: "256", avgPrice: "\u20AC2 680/m\u00B2", trend: "down" },
+  { id: "ŽIRMŪNAI_B2", velocity: "+3,7%", volume: "198", avgPrice: "\u20AC2 150/m\u00B2", trend: "up" },
+  { id: "ANTAKALNIS_C1", velocity: "+6,3%", volume: "124", avgPrice: "\u20AC3 210/m\u00B2", trend: "up" },
 ];
 
 export default function MarketIntelligence() {
   return (
-    <AppLayout activeItem="STRATEGY">
+    <AppLayout activeItem="STRATEGIJA">
       {/* Header */}
       <section className="px-8 py-8 border-b border-border">
         <div className="flex items-center justify-between">
           <div>
             <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-2">
-              INTELLIGENCE_MODULE // CLASSIFIED
+              ŽVALGYBOS_MODULIS // KLASIFIKUOTA
             </div>
             <h1 className="text-2xl font-black tracking-widest uppercase text-on-surface">
-              RINKOS ZVALGYBA
+              RINKOS ŽVALGYBA
             </h1>
           </div>
           <div className="flex items-center gap-2">
@@ -38,16 +38,16 @@ export default function MarketIntelligence() {
           <div className="flex items-center justify-between mb-6">
             <div>
               <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-1">
-                VIDUTINE SANDORIU VERTE
+                VIDUTINĖ SANDORIŲ VERTĖ
               </div>
               <div className="flex items-baseline gap-3">
                 <span className="text-4xl font-black text-on-surface" style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}>
-                  &euro;2.84M
+                  &euro;2,84M
                 </span>
-                <span className="text-sm font-bold text-green-500">+12.4%</span>
+                <span className="text-sm font-bold text-green-500">+12,4%</span>
               </div>
             </div>
-            <div className="text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/40">12M_ROLLING</div>
+            <div className="text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/40">12MĖN_SLENKANTIS</div>
           </div>
           <div className="flex items-end gap-2 h-40">
             {[35, 42, 38, 55, 48, 62, 58, 72, 65, 78, 82, 88].map((h, i) => (
@@ -65,16 +65,16 @@ export default function MarketIntelligence() {
         <div className="flex flex-col">
           <div className="p-6 border-b border-border flex-1">
             <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-2">LIKVIDUMO KOEFICIENTAS</div>
-            <div className="text-4xl font-black text-on-surface" style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}>0.84</div>
+            <div className="text-4xl font-black text-on-surface" style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}>0,84</div>
             <div className="mt-3 h-1.5 bg-container-high">
               <div className="h-full bg-tertiary/60 w-[84%]" />
             </div>
-            <div className="text-[9px] tracking-widest uppercase text-tertiary mt-2">AUKSTESNIS NEI VIDURKIS</div>
+            <div className="text-[9px] tracking-widest uppercase text-tertiary mt-2">AUKŠTESNIS NEI VIDURKIS</div>
           </div>
           <div className="p-6 flex-1">
-            <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-2">RINKOS ISISAVINIMAS</div>
+            <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-2">RINKOS ĮSISAVINIMAS</div>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-black text-on-surface" style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}>68.2</span>
+              <span className="text-4xl font-black text-on-surface" style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}>68,2</span>
               <span className="text-sm font-bold text-on-surface-variant uppercase">Dienos</span>
             </div>
             <div className="mt-3 h-1.5 bg-container-high">
@@ -87,7 +87,7 @@ export default function MarketIntelligence() {
 
       {/* Neighborhood Velocity Table */}
       <section className="px-8 py-8 border-b border-border">
-        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">NEIGHBORHOOD_VELOCITY</div>
+        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">KVARTALŲ_DINAMIKA</div>
         <div className="border border-border overflow-hidden">
           <table className="w-full">
             <thead>
@@ -132,16 +132,16 @@ export default function MarketIntelligence() {
             ].map((dot, i) => (
               <div key={i} className={`absolute ${dot.size} bg-tertiary/40 animate-pulse-dot`} style={{ top: dot.top, left: dot.left, animationDelay: `${i * 0.4}s` }} />
             ))}
-            <div className="absolute bottom-4 left-4 text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/40">VILNIUS_METRO // HEAT_MAP</div>
+            <div className="absolute bottom-4 left-4 text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/40">VILNIUS_METRO // ŠILUMOS_ŽEMĖLAPIS</div>
           </div>
         </div>
         <div className="p-6 space-y-4">
-          <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-2">MAP_TELEMETRY</div>
+          <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-2">ŽEMĖLAPIO_TELEMETRIJA</div>
           {[
-            { label: "AKTYVUS TASKAI", value: "2,847" },
-            { label: "SANDORIU / 24H", value: "156" },
-            { label: "VID. KAINA / M\u00B2", value: "\u20AC3,240" },
-            { label: "ZONA EKSPANSIJA", value: "+4.2%" },
+            { label: "AKTYVŪS TAŠKAI", value: "2 847" },
+            { label: "SANDORIŲ / 24V", value: "156" },
+            { label: "VID. KAINA / M\u00B2", value: "\u20AC3 240" },
+            { label: "ZONOS EKSPANSIJA", value: "+4,2%" },
           ].map((stat) => (
             <div key={stat.label} className="bg-container border border-border p-3">
               <div className="text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/60">{stat.label}</div>
@@ -153,12 +153,12 @@ export default function MarketIntelligence() {
 
       {/* Strategic Insights */}
       <section className="px-8 py-8">
-        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">STRATEGIC_INSIGHTS</div>
+        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">STRATEGINĖS_ĮŽVALGOS</div>
         <div className="grid grid-cols-3 gap-4">
           {[
-            { icon: "trending_up", title: "KOMERCINIO SEKTORIAUS AUGIMAS", text: "Vilniaus komercinio NT sektorius rodo 12.4% metinius augimo rodiklius, virsijant Baltijos vidurkius." },
-            { icon: "warning", title: "REGULIACINIS ATNAUJINIMAS", text: "Nauji energinio efektyvumo reikalavimai isigalios 2026 Q3. Rekomenduojamas isankstinis auditas." },
-            { icon: "psychology", title: "INVESTICIJU GALIMYBE", text: "Naujamiescio D3 sektorius rodo neiprastai dideliu nuolaidu. Strategine akumuliacija rekomenduojama." },
+            { icon: "trending_up", title: "KOMERCINIO SEKTORIAUS AUGIMAS", text: "Vilniaus komercinio NT sektorius rodo 12,4% metinius augimo rodiklius, viršijant Baltijos vidurkius." },
+            { icon: "warning", title: "REGULIACINIS ATNAUJINIMAS", text: "Nauji energinio efektyvumo reikalavimai įsigalios 2026 III ketv. Rekomenduojamas išankstinis auditas." },
+            { icon: "psychology", title: "INVESTICIJŲ GALIMYBĖ", text: "Naujamiesčio D3 sektorius rodo neįprastai didelių nuolaidų. Strateginė akumuliacija rekomenduojama." },
           ].map((insight) => (
             <div key={insight.title} className="bg-container border border-border p-5">
               <span className="material-symbols-outlined text-tertiary text-lg mb-3 block">{insight.icon}</span>

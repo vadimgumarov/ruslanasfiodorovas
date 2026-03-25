@@ -2,7 +2,7 @@ import AppLayout from "@/components/AppLayout";
 
 export default function Home() {
   return (
-    <AppLayout activeItem="COMMAND">
+    <AppLayout activeItem="VALDYMAS">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#0e0e0e] to-[#0a0a0a]" />
@@ -12,11 +12,11 @@ export default function Home() {
             OPERACINIS CENTRAS
           </div>
           <h1 className="text-5xl font-black tracking-tight text-on-surface uppercase leading-tight max-w-3xl">
-            STRATEGINES OPERACIJOS: PRADZIA
+            STRATEGINĖS OPERACIJOS: PRADŽIA
           </h1>
           <p className="mt-6 text-sm leading-relaxed text-on-surface-variant max-w-2xl tracking-wide">
             Integruota nekilnojamojo turto valdymo platforma. Realaus laiko turto
-            stebejimas, rinkos analitika ir strateginis konsultavimas Baltijos ir
+            stebėjimas, rinkos analitika ir strateginis konsultavimas Baltijos ir
             Europos rinkose.
           </p>
         </div>
@@ -25,9 +25,9 @@ export default function Home() {
       {/* Metrics */}
       <section className="grid grid-cols-3 border-b border-border">
         {[
-          { value: "\u20AC1.2B", label: "Valdomas Turtas", sub: "PORTFOLIO_VALUE" },
-          { value: "20+", label: "Patirtis (metai)", sub: "EXPERIENCE_YRS" },
-          { value: "142", label: "Aktyvus Objektai", sub: "ACTIVE_ASSETS" },
+          { value: "\u20AC1.2B", label: "Valdomas turtas", sub: "PORTFELIO_VERTĖ" },
+          { value: "20+", label: "Patirtis (metai)", sub: "PATIRTIES_METAI" },
+          { value: "142", label: "Aktyvūs objektai", sub: "AKTYVŪS_OBJEKTAI" },
         ].map((m) => (
           <div
             key={m.sub}
@@ -54,12 +54,12 @@ export default function Home() {
         {/* Left Info */}
         <div className="px-8 py-10 border-r border-border">
           <h2 className="text-lg font-black tracking-widest uppercase text-on-surface mb-6">
-            INICIJUOTI TURTO AUDITA
+            INICIJUOTI TURTO AUDITĄ
           </h2>
           <div className="space-y-5">
             {[
               { icon: "verified", text: "Nepriklausomas turto vertinimas pagal tarptautinius standartus" },
-              { icon: "analytics", text: "Realaus laiko rinkos duomenu analitika ir prognozes" },
+              { icon: "analytics", text: "Realaus laiko rinkos duomenų analitika ir prognozės" },
               { icon: "shield", text: "Konfidencialus strateginis konsultavimas" },
             ].map((item) => (
               <div key={item.icon} className="flex items-start gap-3">
@@ -85,16 +85,16 @@ export default function Home() {
                 <option>KOMERCINIS</option>
                 <option>REZIDENCINIS</option>
                 <option>INDUSTRINIS</option>
-                <option>MISRUS</option>
+                <option>MIŠRUS</option>
               </select>
             </div>
             <div>
               <label className="block text-[10px] tracking-[0.3em] uppercase text-on-surface-variant mb-2">
-                TIKSLINE VERTE
+                TIKSLINĖ VERTĖ
               </label>
               <input
                 type="text"
-                placeholder="\u20AC 0.00"
+                placeholder={"\u20AC 0.00"}
                 className="w-full bg-container border border-border text-on-surface text-xs tracking-wide px-3 py-2.5 placeholder:text-on-surface-variant/40 focus:border-tertiary focus:outline-none"
               />
             </div>
@@ -114,7 +114,7 @@ export default function Home() {
               </label>
               <textarea
                 rows={3}
-                placeholder="Iveskite papildoma informacija..."
+                placeholder="Įveskite papildomą informaciją..."
                 className="w-full bg-container border border-border text-on-surface text-xs tracking-wide px-3 py-2.5 placeholder:text-on-surface-variant/40 focus:border-tertiary focus:outline-none resize-none"
               />
             </div>
@@ -122,7 +122,7 @@ export default function Home() {
               type="submit"
               className="w-full bg-tertiary/10 border border-tertiary/30 text-tertiary text-[11px] tracking-[0.3em] uppercase font-semibold py-3 hover:bg-tertiary/20 transition-colors"
             >
-              PATEIKTI UZKLAUSĄ
+              PATEIKTI UŽKLAUSĄ
             </button>
           </form>
         </div>
@@ -131,10 +131,9 @@ export default function Home() {
       {/* Telemetry HUD */}
       <section className="px-8 py-8 border-b border-border">
         <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">
-          SYSTEM_TELEMETRY
+          SISTEMOS_TELEMETRIJA
         </div>
         <div className="grid grid-cols-4 gap-4">
-          {/* Mini bar chart */}
           <div className="bg-container border border-border p-4 col-span-2">
             <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant mb-3">
               APKROVOS METRIKA
@@ -149,10 +148,9 @@ export default function Home() {
               ))}
             </div>
           </div>
-          {/* Stats */}
           <div className="bg-container border border-border p-4">
             <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant mb-2">
-              LATENCY
+              DELSA
             </div>
             <div
               className="text-2xl font-black text-on-surface"
@@ -161,12 +159,12 @@ export default function Home() {
               12ms
             </div>
             <div className="text-[9px] tracking-widest uppercase text-green-500 mt-1">
-              OPTIMAL
+              OPTIMALUS
             </div>
           </div>
           <div className="bg-container border border-border p-4">
             <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant mb-2">
-              LOAD
+              APKROVA
             </div>
             <div
               className="text-2xl font-black text-on-surface"
@@ -175,7 +173,7 @@ export default function Home() {
               34%
             </div>
             <div className="text-[9px] tracking-widest uppercase text-tertiary mt-1">
-              NOMINAL
+              NOMINALUS
             </div>
           </div>
         </div>
@@ -184,7 +182,6 @@ export default function Home() {
       {/* Map Section */}
       <section className="relative border-b border-border">
         <div className="h-80 bg-gradient-to-br from-[#0d1117] via-[#131820] to-[#0a0e14] relative overflow-hidden">
-          {/* Grid overlay to simulate map */}
           <div className="absolute inset-0 opacity-10">
             <div
               className="w-full h-full"
@@ -195,21 +192,19 @@ export default function Home() {
               }}
             />
           </div>
-          {/* Pulsing dot */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <div className="w-3 h-3 bg-tertiary animate-pulse-dot" />
             <div className="absolute inset-0 w-3 h-3 bg-tertiary/30 animate-ping" />
           </div>
-          {/* Address card overlay */}
           <div className="absolute bottom-6 left-8 bg-container/90 border border-border p-4 backdrop-blur-sm">
             <div className="text-[10px] tracking-[0.3em] uppercase text-tertiary mb-1">
-              HQ_LOCATION
+              BŪSTINĖS_LOKACIJA
             </div>
             <div className="text-xs text-on-surface tracking-wide">
               Vilnius, Lietuva
             </div>
             <div className="text-[10px] text-on-surface-variant tracking-wide mt-1">
-              54.6872\u00b0N, 25.2797\u00b0E
+              54.6872&deg;N, 25.2797&deg;E
             </div>
           </div>
         </div>

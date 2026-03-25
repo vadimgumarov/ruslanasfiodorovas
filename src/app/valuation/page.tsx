@@ -2,13 +2,13 @@ import AppLayout from "@/components/AppLayout";
 
 export default function Valuation() {
   return (
-    <AppLayout activeItem="ARCHIVE">
+    <AppLayout activeItem="ARCHYVAS">
       {/* Header */}
       <section className="px-8 py-8 border-b border-border">
         <div className="flex items-center justify-between">
           <div>
             <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-2">
-              ARCHIVE_MODULE // VALUATION_ENGINE
+              ARCHYVO_MODULIS // VERTINIMO_VARIKLIS
             </div>
             <h1 className="text-2xl font-black tracking-widest uppercase text-on-surface">
               VERTINIMO ARCHYVAS
@@ -24,10 +24,10 @@ export default function Valuation() {
       {/* Summary KPIs */}
       <section className="grid grid-cols-4 border-b border-border">
         {[
-          { label: "BENDRAS VERTINIMU SK.", value: "847", sub: "TOTAL_VALUATIONS" },
-          { label: "BENDRA VERTE", value: "\u20AC2.4B", sub: "AGGREGATE_VALUE" },
-          { label: "VID. TIKSLUMAS", value: "97.2%", sub: "ACCURACY_RATE" },
-          { label: "AKTYVUS MODELIAI", value: "12", sub: "ACTIVE_MODELS" },
+          { label: "BENDRAS VERTINIMŲ SK.", value: "847", sub: "VISI_VERTINIMAI" },
+          { label: "BENDRA VERTĖ", value: "\u20AC2,4B", sub: "BENDRA_VERTĖ" },
+          { label: "VID. TIKSLUMAS", value: "97,2%", sub: "TIKSLUMO_RODIKLIS" },
+          { label: "AKTYVŪS MODELIAI", value: "12", sub: "AKTYVŪS_MODELIAI" },
         ].map((kpi) => (
           <div key={kpi.sub} className="border-r border-border last:border-r-0 px-6 py-6">
             <div className="text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-2">{kpi.sub}</div>
@@ -39,23 +39,23 @@ export default function Valuation() {
 
       {/* Recent Valuations Table */}
       <section className="px-8 py-8 border-b border-border">
-        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">RECENT_VALUATIONS</div>
+        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">PASKUTINIAI_VERTINIMAI</div>
         <div className="border border-border overflow-hidden">
           <table className="w-full">
             <thead>
               <tr className="bg-container-high border-b border-border">
-                {["ID", "OBJEKTAS", "TIPAS", "VERTE", "DATA", "STATUSAS"].map((h) => (
+                {["ID", "OBJEKTAS", "TIPAS", "VERTĖ", "DATA", "STATUSAS"].map((h) => (
                   <th key={h} className="text-left text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 font-normal px-4 py-3">{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {[
-                { id: "VAL-0847", name: "The Glass Pavilion", type: "KOMERCINIS", value: "\u20AC84.2M", date: "2026-03-22", status: "PATVIRTINTAS" },
-                { id: "VAL-0846", name: "Phase IV Core", type: "REZIDENCINIS", value: "\u20AC52.1M", date: "2026-03-20", status: "PATVIRTINTAS" },
-                { id: "VAL-0845", name: "Tower Delta", type: "KOMERCINIS", value: "\u20AC148.5M", date: "2026-03-18", status: "PERZIURIMAS" },
-                { id: "VAL-0844", name: "Baltic Gateway", type: "MISRUS", value: "\u20AC96.3M", date: "2026-03-15", status: "PATVIRTINTAS" },
-                { id: "VAL-0843", name: "Northern Logistics Hub", type: "INDUSTRINIS", value: "\u20AC122.8M", date: "2026-03-12", status: "PATVIRTINTAS" },
+                { id: "VAL-0847", name: "The Glass Pavilion", type: "KOMERCINIS", value: "\u20AC84,2M", date: "2026-03-22", status: "PATVIRTINTAS" },
+                { id: "VAL-0846", name: "Phase IV Core", type: "REZIDENCINIS", value: "\u20AC52,1M", date: "2026-03-20", status: "PATVIRTINTAS" },
+                { id: "VAL-0845", name: "Tower Delta", type: "KOMERCINIS", value: "\u20AC148,5M", date: "2026-03-18", status: "PERŽIŪRIMAS" },
+                { id: "VAL-0844", name: "Baltic Gateway", type: "MIŠRUS", value: "\u20AC96,3M", date: "2026-03-15", status: "PATVIRTINTAS" },
+                { id: "VAL-0843", name: "Northern Logistics Hub", type: "INDUSTRINIS", value: "\u20AC122,8M", date: "2026-03-12", status: "PATVIRTINTAS" },
               ].map((row) => (
                 <tr key={row.id} className="border-b border-border last:border-b-0 hover:bg-container transition-colors">
                   <td className="px-4 py-3 text-[10px] tracking-widest text-on-surface-variant font-mono">{row.id}</td>
@@ -75,12 +75,12 @@ export default function Valuation() {
 
       {/* Valuation Models */}
       <section className="px-8 py-8">
-        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">VALUATION_MODELS</div>
+        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">VERTINIMO_MODELIAI</div>
         <div className="grid grid-cols-3 gap-4">
           {[
-            { icon: "calculate", title: "DCF MODELIS", desc: "Diskontuotu pinigu srautu analize. Standartinis vertinimo metodas komerciniams objektams.", status: "AKTYVUS" },
-            { icon: "compare_arrows", title: "PALYGINAMASIS", desc: "Rinkos palyginimo metodas pagal panasiu objektu sandoriu duomenis.", status: "AKTYVUS" },
-            { icon: "precision_manufacturing", title: "PAJAMU METODAS", desc: "Pajamu kapitalizacijos metodas investiciniam nekilnojamajam turtui.", status: "AKTYVUS" },
+            { icon: "calculate", title: "DCF MODELIS", desc: "Diskontuotų pinigų srautų analizė. Standartinis vertinimo metodas komerciniams objektams.", status: "AKTYVUS" },
+            { icon: "compare_arrows", title: "PALYGINAMASIS", desc: "Rinkos palyginimo metodas pagal panašių objektų sandorių duomenis.", status: "AKTYVUS" },
+            { icon: "precision_manufacturing", title: "PAJAMŲ METODAS", desc: "Pajamų kapitalizacijos metodas investiciniam nekilnojamajam turtui.", status: "AKTYVUS" },
           ].map((model) => (
             <div key={model.title} className="bg-container border border-border p-5">
               <div className="flex items-center justify-between mb-3">

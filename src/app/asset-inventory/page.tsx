@@ -1,23 +1,23 @@
 import AppLayout from "@/components/AppLayout";
 
 const inventoryData = [
-  { id: "AST-001", name: "The Glass Pavilion", type: "KOMERCINIS", area: "12,400 m\u00B2", value: "\u20AC84.2M", status: "AKTYVUS" },
-  { id: "AST-002", name: "Phase IV Core", type: "REZIDENCINIS", area: "8,200 m\u00B2", value: "\u20AC52.1M", status: "AKTYVUS" },
-  { id: "AST-003", name: "Tower Delta", type: "KOMERCINIS", area: "22,800 m\u00B2", value: "\u20AC148.5M", status: "AKTYVUS" },
-  { id: "AST-004", name: "Baltic Gateway", type: "MISRUS", area: "15,600 m\u00B2", value: "\u20AC96.3M", status: "PERZIURA" },
-  { id: "AST-005", name: "Riverside Complex", type: "REZIDENCINIS", area: "6,400 m\u00B2", value: "\u20AC38.7M", status: "AKTYVUS" },
-  { id: "AST-006", name: "Northern Logistics Hub", type: "INDUSTRINIS", area: "45,200 m\u00B2", value: "\u20AC122.8M", status: "AKTYVUS" },
+  { id: "AST-001", name: "The Glass Pavilion", type: "KOMERCINIS", area: "12 400 m\u00B2", value: "\u20AC84,2M", status: "AKTYVUS" },
+  { id: "AST-002", name: "Phase IV Core", type: "REZIDENCINIS", area: "8 200 m\u00B2", value: "\u20AC52,1M", status: "AKTYVUS" },
+  { id: "AST-003", name: "Tower Delta", type: "KOMERCINIS", area: "22 800 m\u00B2", value: "\u20AC148,5M", status: "AKTYVUS" },
+  { id: "AST-004", name: "Baltic Gateway", type: "MIŠRUS", area: "15 600 m\u00B2", value: "\u20AC96,3M", status: "PERŽIŪRA" },
+  { id: "AST-005", name: "Riverside Complex", type: "REZIDENCINIS", area: "6 400 m\u00B2", value: "\u20AC38,7M", status: "AKTYVUS" },
+  { id: "AST-006", name: "Northern Logistics Hub", type: "INDUSTRINIS", area: "45 200 m\u00B2", value: "\u20AC122,8M", status: "AKTYVUS" },
 ];
 
 export default function AssetInventory() {
   return (
-    <AppLayout activeItem="ASSETS">
+    <AppLayout activeItem="TURTAS">
       {/* Header */}
       <section className="px-8 py-8 border-b border-border">
         <div className="flex items-center justify-between">
           <div>
             <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-2">
-              ASSET_REGISTRY // LIVE
+              TURTO_REGISTRAS // TIESIOGINIS
             </div>
             <h1 className="text-2xl font-black tracking-widest uppercase text-on-surface">
               TURTO INVENTORIUS
@@ -25,13 +25,13 @@ export default function AssetInventory() {
           </div>
           <div className="text-right">
             <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-1">
-              PORTFOLIO_VALUE
+              PORTFELIO_VERTĖ
             </div>
             <div
               className="text-3xl font-black text-on-surface"
               style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}
             >
-              &euro;842.12M
+              &euro;842,12M
             </div>
           </div>
         </div>
@@ -45,24 +45,24 @@ export default function AssetInventory() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
           <div className="relative p-8 h-full flex flex-col justify-end min-h-[320px]">
             <div className="text-[10px] tracking-[0.3em] uppercase text-tertiary mb-2">
-              FLAGSHIP_ASSET
+              PAGRINDINIS_TURTAS
             </div>
             <h2 className="text-3xl font-black tracking-tight uppercase text-on-surface mb-4">
               The Glass Pavilion
             </h2>
             <div className="grid grid-cols-3 gap-6">
               <div>
-                <div className="text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/60">GLA</div>
+                <div className="text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/60">BNP</div>
                 <div className="text-sm font-bold text-on-surface mt-1" style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}>
-                  12,400 m&sup2;
+                  12 400 m&sup2;
                 </div>
               </div>
               <div>
-                <div className="text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/60">STATUS</div>
+                <div className="text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/60">BŪSENA</div>
                 <div className="text-sm font-bold text-green-500 mt-1">AKTYVUS</div>
               </div>
               <div>
-                <div className="text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/60">COORDINATES</div>
+                <div className="text-[9px] tracking-[0.3em] uppercase text-on-surface-variant/60">KOORDINATĖS</div>
                 <div className="text-sm font-bold text-on-surface mt-1" style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}>
                   54.68&deg;N 25.28&deg;E
                 </div>
@@ -74,13 +74,13 @@ export default function AssetInventory() {
         {/* System Telemetry Sidebar */}
         <div className="p-6 space-y-6">
           <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">
-            SYSTEM_TELEMETRY
+            SISTEMOS_TELEMETRIJA
           </div>
 
           <div>
             <div className="flex justify-between mb-2">
-              <span className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant">Market Volatility</span>
-              <span className="text-[10px] tracking-widest text-tertiary">LOW</span>
+              <span className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant">Rinkos svyravimas</span>
+              <span className="text-[10px] tracking-widest text-tertiary">ŽEMAS</span>
             </div>
             <div className="h-1.5 bg-container-high">
               <div className="h-full bg-tertiary/60 w-[28%]" />
@@ -89,8 +89,8 @@ export default function AssetInventory() {
 
           <div>
             <div className="flex justify-between mb-2">
-              <span className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant">Occupancy</span>
-              <span className="text-[10px] tracking-widest text-green-500" style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}>98.4%</span>
+              <span className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant">Užimtumas</span>
+              <span className="text-[10px] tracking-widest text-green-500" style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}>98,4%</span>
             </div>
             <div className="h-1.5 bg-container-high">
               <div className="h-full bg-green-500/60 w-[98.4%]" />
@@ -99,7 +99,7 @@ export default function AssetInventory() {
 
           <div>
             <div className="flex justify-between mb-2">
-              <span className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant">Energy Rating</span>
+              <span className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant">Energinis reitingas</span>
               <span className="text-[10px] tracking-widest text-green-500">A++</span>
             </div>
             <div className="h-1.5 bg-container-high">
@@ -109,8 +109,8 @@ export default function AssetInventory() {
 
           <div>
             <div className="flex justify-between mb-2">
-              <span className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant">Yield</span>
-              <span className="text-[10px] tracking-widest text-tertiary" style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}>6.8%</span>
+              <span className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant">Pelningumas</span>
+              <span className="text-[10px] tracking-widest text-tertiary" style={{ fontFeatureSettings: '"tnum" 1, "onum" 1' }}>6,8%</span>
             </div>
             <div className="h-1.5 bg-container-high">
               <div className="h-full bg-tertiary/60 w-[68%]" />
@@ -122,9 +122,9 @@ export default function AssetInventory() {
       {/* 3 Smaller Cards */}
       <section className="grid grid-cols-3 border-b border-border">
         {[
-          { name: "Phase IV Core", type: "REZIDENCINIS", value: "\u20AC52.1M", gradient: "from-[#1a1a2e] to-[#0a0a14]" },
-          { name: "Tower Delta", type: "KOMERCINIS", value: "\u20AC148.5M", gradient: "from-[#1e2a1a] to-[#0a140a]" },
-          { name: "Architectural Services", type: "PASLAUGA", value: "PREMIUM", gradient: "from-[#2a1a1a] to-[#140a0a]" },
+          { name: "Phase IV Core", type: "REZIDENCINIS", value: "\u20AC52,1M", gradient: "from-[#1a1a2e] to-[#0a0a14]" },
+          { name: "Tower Delta", type: "KOMERCINIS", value: "\u20AC148,5M", gradient: "from-[#1e2a1a] to-[#0a140a]" },
+          { name: "Architektūrinės paslaugos", type: "PASLAUGA", value: "PREMIUM", gradient: "from-[#2a1a1a] to-[#140a0a]" },
         ].map((card) => (
           <div key={card.name} className="relative overflow-hidden border-r border-border last:border-r-0">
             <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient}`} />
@@ -139,12 +139,12 @@ export default function AssetInventory() {
 
       {/* Notifications */}
       <section className="px-8 py-6 border-b border-border">
-        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">NOTIFICATIONS_FEED</div>
+        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">PRANEŠIMŲ_SRAUTAS</div>
         <div className="space-y-2">
           {[
-            { time: "14:32", msg: "Turto vertinimo ataskaita paruosta: AST-003", level: "info" },
+            { time: "14:32", msg: "Turto vertinimo ataskaita paruošta: AST-003", level: "info" },
             { time: "11:15", msg: "Naujas nuomininkas patvirtintas: Phase IV Core", level: "success" },
-            { time: "09:48", msg: "Rinkos volatilumas padidejes sektoriuje CENTRAS_S1", level: "warning" },
+            { time: "09:48", msg: "Rinkos svyravimas padidėjęs sektoriuje CENTRAS_S1", level: "warning" },
           ].map((n) => (
             <div key={n.time} className="flex items-center gap-3 py-2 px-3 bg-container border border-border">
               <span className={`w-1.5 h-1.5 ${n.level === "success" ? "bg-green-500" : n.level === "warning" ? "bg-yellow-500" : "bg-tertiary"}`} />
@@ -157,12 +157,12 @@ export default function AssetInventory() {
 
       {/* Inventory Table */}
       <section className="px-8 py-8">
-        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">INVENTORY_REGISTRY</div>
+        <div className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 mb-4">INVENTORIAUS_REGISTRAS</div>
         <div className="border border-border overflow-hidden">
           <table className="w-full">
             <thead>
               <tr className="bg-container-high border-b border-border">
-                {["ID", "OBJEKTAS", "TIPAS", "PLOTAS", "VERTE", "BUSENA"].map((h) => (
+                {["ID", "OBJEKTAS", "TIPAS", "PLOTAS", "VERTĖ", "BŪSENA"].map((h) => (
                   <th key={h} className="text-left text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60 font-normal px-4 py-3">{h}</th>
                 ))}
               </tr>
