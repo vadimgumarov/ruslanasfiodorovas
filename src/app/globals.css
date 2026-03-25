@@ -1,13 +1,20 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #f8f9fa;
-  --color-foreground: #1a1a1a;
-  --color-primary: #5d5e61;
-  --color-secondary: #785a1a;
-  --color-tertiary: #496178;
-  --color-border: #e2e4e7;
-  --font-sans: var(--font-manrope);
+  --color-surface: #0e0e0e;
+  --color-lowest: #000000;
+  --color-sidebar: #131313;
+  --color-container: #191a1a;
+  --color-container-high: #1f2020;
+  --color-highest: #252626;
+  --color-on-surface: #e7e5e4;
+  --color-on-surface-variant: #acabaa;
+  --color-primary: #c9c6c5;
+  --color-tertiary: #64acff;
+  --color-secondary: #8ba1ac;
+  --color-border: #2a2a2a;
+  --color-border-strong: #3a3a3a;
+  --font-sans: var(--font-inter);
   --radius-sm: 0px;
   --radius-md: 0px;
   --radius-lg: 0px;
@@ -18,8 +25,38 @@
   --radius-full: 0px;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #252626 #0e0e0e;
+}
+
 body {
-  background: var(--color-background);
-  color: var(--color-foreground);
+  background: var(--color-lowest);
+  color: var(--color-on-surface);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Pulsing dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
 }

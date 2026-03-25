@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="lt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SOVEREIGN_INTEL | Konfidenciali Užklausa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#252626",
+                        "surface-container-highest": "#252626",
+                        "on-secondary-container": "#acc3ce",
+                        "secondary-fixed": "#cfe6f2",
+                        "on-primary-fixed": "#403f3f",
+                        "primary-fixed": "#e5e2e1",
+                        "inverse-primary": "#605f5e",
+                        "surface": "#0e0e0e",
+                        "tertiary": "#64acff",
+                        "surface-dim": "#0e0e0e",
+                        "on-secondary": "#0d232b",
+                        "primary-dim": "#bbb8b8",
+                        "on-surface-variant": "#acabaa",
+                        "tertiary-container": "#429efd",
+                        "tertiary-fixed": "#429efd",
+                        "secondary-dim": "#8ba1ac",
+                        "on-tertiary-fixed": "#000000",
+                        "background": "#0e0e0e",
+                        "on-tertiary-container": "#001e3b",
+                        "surface-container-lowest": "#000000",
+                        "secondary": "#8ba1ac",
+                        "inverse-surface": "#fcf8f8",
+                        "secondary-fixed-dim": "#c1d8e4",
+                        "on-error": "#490106",
+                        "on-secondary-fixed": "#2d424c",
+                        "on-primary-fixed-variant": "#5c5b5b",
+                        "secondary-container": "#293e48",
+                        "primary-fixed-dim": "#d7d4d3",
+                        "tertiary-fixed-dim": "#2f91ef",
+                        "on-error-container": "#ff9993",
+                        "outline": "#767575",
+                        "on-background": "#e7e5e4",
+                        "primary-container": "#474646",
+                        "tertiary-dim": "#47a1ff",
+                        "inverse-on-surface": "#565554",
+                        "surface-bright": "#2c2c2c",
+                        "error": "#ee7d77",
+                        "error-dim": "#bb5551",
+                        "surface-container-high": "#1f2020",
+                        "on-primary-container": "#d3d0cf",
+                        "surface-tint": "#c9c6c5",
+                        "on-primary": "#414040",
+                        "on-secondary-fixed-variant": "#495f69",
+                        "on-tertiary-fixed-variant": "#00284b",
+                        "surface-container": "#191a1a",
+                        "error-container": "#7f2927",
+                        "on-tertiary": "#002b50",
+                        "primary": "#c9c6c5",
+                        "on-surface": "#e7e5e4",
+                        "outline-variant": "#484848",
+                        "surface-container-low": "#131313"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #0e0e0e;
+            color: #e7e5e4;
+            font-family: 'Inter', sans-serif;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+        }
+        .monolith-grid {
+            display: grid;
+            grid-template-columns: 256px 1fr 320px;
+            min-height: 100vh;
+        }
+        .tnum { font-feature-settings: "tnum" 1, "onum" 1; }
+    </style>
+</head>
+<body class="antialiased selection:bg-tertiary selection:text-on-tertiary">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 z-50 w-full h-16 flex justify-between items-center px-6 bg-[#0e0e0e] border-b border-[#484848]/15 font-['Inter'] antialiased tracking-tight font-feature-settings-['tnum'_1,'onum'_1]">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black tracking-tighter text-[#c9c6c5] uppercase">SOVEREIGN_INTEL</span>
+<nav class="hidden md:flex gap-6 items-center h-full">
+<a class="text-[#acabaa] hover:text-[#e7e5e4] transition-colors text-[11px] font-bold tracking-widest uppercase" href="#">STRATEGY</a>
+<a class="text-[#acabaa] hover:text-[#e7e5e4] transition-colors text-[11px] font-bold tracking-widest uppercase" href="#">ASSETS</a>
+<a class="text-[#c9c6c5] border-b-2 border-[#c9c6c5] pb-1 font-bold text-[11px] tracking-widest uppercase" href="#">ADVISORY</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-3">
+<button class="p-2 hover:bg-[#1f2020] transition-all duration-150 active:opacity-80 active:scale-[0.99] text-[#c9c6c5]">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+</button>
+<button class="p-2 hover:bg-[#1f2020] transition-all duration-150 active:opacity-80 active:scale-[0.99] text-[#c9c6c5]">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+</button>
+<button class="p-2 hover:bg-[#1f2020] transition-all duration-150 active:opacity-80 active:scale-[0.99] text-[#c9c6c5]">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+</button>
+</div>
+<div class="h-8 w-8 bg-surface-container-high border border-outline-variant/30 flex items-center justify-center">
+<img alt="Operational Command Avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional male executive in a dark environment with dramatic rim lighting and sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrKcCIO3MBRbs2ATupPIUL6JAukvbJyySNHqIKYvZECaOoj4YLr8AYZWl9z6_bGA2WQn2mHM3yzl5a35FmDgtaVt_1wmBHLHAn4ntFD2yFBtgU-cS-uJZ40JldcevpJ2of9JH08tCypNZbgGTPYcnca8Z4t31VcCPk5QlJiMurF8Qj1i5-hzi_4FRQlXOl6wVokc6NhfGhbAgdj2X2dSh5UpFeRjEGABb3deC5j5FrgQUwVaq-1w-KjTIJnBiBsRif4FuuAs7-Tto"/>
+</div>
+</div>
+</header>
+<div class="monolith-grid pt-16">
+<!-- Side Navigation Bar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col pt-16 z-40 bg-[#131313] w-64 border-r border-[#484848]/15">
+<div class="p-6 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-1.5 h-6 bg-tertiary"></div>
+<div>
+<div class="text-[11px] font-medium tracking-widest uppercase text-[#c9c6c5]">NODE_01</div>
+<div class="text-[9px] text-[#acabaa] tracking-[0.2em] uppercase">STRATEGIC_CORE</div>
+</div>
+</div>
+</div>
+<nav class="flex-grow flex flex-col space-y-[1px] bg-[#000000]">
+<a class="flex items-center gap-4 px-6 py-4 text-[#acabaa] hover:bg-[#1f2020] hover:text-[#e7e5e4] transition-colors duration-100 font-['Inter'] text-[11px] font-medium tracking-widest uppercase group" href="#">
+<span class="material-symbols-outlined group-active:translate-x-1" data-icon="terminal">terminal</span>
+<span>COMMAND</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#acabaa] hover:bg-[#1f2020] hover:text-[#e7e5e4] transition-colors duration-100 font-['Inter'] text-[11px] font-medium tracking-widest uppercase group" href="#">
+<span class="material-symbols-outlined group-active:translate-x-1" data-icon="insights">insights</span>
+<span>STRATEGY</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#acabaa] hover:bg-[#1f2020] hover:text-[#e7e5e4] transition-colors duration-100 font-['Inter'] text-[11px] font-medium tracking-widest uppercase group" href="#">
+<span class="material-symbols-outlined group-active:translate-x-1" data-icon="domain">domain</span>
+<span>ASSETS</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 bg-[#1f2020] text-[#c9c6c5] border-l-2 border-[#64acff] font-['Inter'] text-[11px] font-medium tracking-widest uppercase group" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span>ADVISORY</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#acabaa] hover:bg-[#1f2020] hover:text-[#e7e5e4] transition-colors duration-100 font-['Inter'] text-[11px] font-medium tracking-widest uppercase group" href="#">
+<span class="material-symbols-outlined group-active:translate-x-1" data-icon="inventory_2">inventory_2</span>
+<span>ARCHIVE</span>
+</a>
+</nav>
+<div class="mt-auto p-4 space-y-2 bg-[#131313]">
+<div class="flex items-center justify-between px-2 py-1 bg-[#1f2020] text-[9px] tracking-widest text-tertiary">
+<span>SYSTEM_STATUS</span>
+<span class="flex h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+</div>
+<a class="flex items-center gap-3 px-2 py-2 text-[#acabaa] hover:text-white transition-opacity text-[11px] font-medium tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
+<span>LOGOUT</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="col-start-2 p-12 bg-surface">
+<header class="mb-12">
+<div class="flex items-baseline gap-4 mb-2">
+<h1 class="text-6xl font-black tracking-tighter uppercase text-on-surface">Užklausa</h1>
+<span class="text-tertiary text-sm font-mono tracking-widest">[ CONFIDENTIAL_ACCESS_LVL_9 ]</span>
+</div>
+<p class="text-on-surface-variant max-w-2xl text-lg font-light leading-relaxed">
+                    Sveiki atvykę į „The Sovereign Intelligence“ saugaus ryšio portalą. Jūsų užklausa bus apdorota per šifruotą kanalą „Alpha-9“ protokolu.
+                </p>
+</header>
+<div class="grid grid-cols-12 gap-px bg-surface-container-lowest border border-outline-variant/15">
+<!-- Strategic Module: Inquiry Form -->
+<section class="col-span-8 bg-surface-container-low p-10">
+<div class="flex justify-between items-center mb-10">
+<h2 class="text-xs font-bold tracking-[0.3em] uppercase text-on-surface-variant">Operaciniai Duomenys</h2>
+<span class="text-[10px] font-mono text-outline uppercase">Užpildykite visus privalomus laukus</span>
+</div>
+<form class="space-y-12">
+<div class="grid grid-cols-2 gap-12">
+<div class="space-y-1">
+<label class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant block">Subjektas / Vardas</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-3 text-on-surface placeholder:text-outline-variant focus:border-tertiary transition-colors" placeholder="IDENTIFIKATORIUS_00" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant block">Turto Kategorija</label>
+<select class="w-full bg-transparent border-b border-outline-variant py-3 text-on-surface focus:border-tertiary transition-colors appearance-none cursor-pointer">
+<option class="bg-surface-container-high">STRATEGINIS_NEKILNOJAMASIS_TURTAS</option>
+<option class="bg-surface-container-high">PRIVATUS_KAPITALAS</option>
+<option class="bg-surface-container-high">LOGISTIKOS_INFRASTRUKTŪRA</option>
+</select>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant block">Užklausos Detalizavimas</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant py-3 text-on-surface placeholder:text-outline-variant focus:border-tertiary transition-colors resize-none" placeholder="Įveskite konfidencialią informaciją čia..." rows="6"></textarea>
+</div>
+<div class="flex items-center justify-between pt-6">
+<div class="flex items-center gap-4 text-[10px] text-outline font-mono">
+<span class="material-symbols-outlined text-sm" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+                                AES-256 ŠIFRAVIMAS AKTYVUOTAS
+                            </div>
+<button class="group relative flex items-center gap-6 px-10 py-4 bg-primary text-on-primary font-bold tracking-widest uppercase overflow-hidden hover:bg-white transition-colors" type="submit">
+<span>Transmit_Inquiry</span>
+<span class="material-symbols-outlined translate-x-0 group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+</section>
+<!-- Strategic Module: Telemetry HUD -->
+<aside class="col-span-4 bg-surface-container p-10 flex flex-col">
+<div class="mb-12">
+<h2 class="text-xs font-bold tracking-[0.3em] uppercase text-on-surface-variant mb-6">Sistemos Būsena</h2>
+<div class="space-y-6">
+<div class="flex justify-between items-end border-b border-outline-variant/15 pb-2">
+<span class="text-[10px] text-outline uppercase tracking-widest">Saugumo Mazgas</span>
+<span class="text-sm font-mono text-tertiary tnum">ACTIVE_01</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/15 pb-2">
+<span class="text-[10px] text-outline uppercase tracking-widest">Atsako Laikas</span>
+<span class="text-sm font-mono text-on-surface tnum">14ms</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/15 pb-2">
+<span class="text-[10px] text-outline uppercase tracking-widest">Kanalo Apkrova</span>
+<div class="w-24 h-1.5 bg-surface-container-low mb-1 overflow-hidden">
+<div class="h-full bg-secondary-dim w-[42%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-auto space-y-4">
+<div class="aspect-square bg-surface-container-low flex items-center justify-center border border-outline-variant/20 group cursor-crosshair">
+<div class="relative w-full h-full p-4 overflow-hidden">
+<img alt="System Architecture" class="w-full h-full object-cover opacity-30 grayscale group-hover:opacity-50 transition-opacity" data-alt="High-contrast architectural shot of a brutalist concrete monolith against a dark stormy sky, monochromatic and imposing style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4sr06U2K6D1tgsY23aA2DtLl8qQu9Ngv8rJYVXuPcE53sD7lIk6tVrxvqrYpvyqBw1REMA_aRLG7dcZaUGlJhmwQsGFuR74H8OEXLZocM6BJY7z8ErN5C6MZosZImQTcuCwKGwE9PA4-v9A7kE_65bQ7kyRsLpgSf_YgLzukkEf8n1ejJsqIEFrNiDaKv2mhla7K2ahpKUcF4Cj6F3zAgzvHV2PdcNjCDv5m_wxz3-aan7ckg8bYs7XSWMzMWJq6KZ7BpwpCT6UI"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+<div class="text-[10px] font-mono text-on-surface-variant mb-2 tracking-[0.2em]">GLOBAL_PRESENCE</div>
+<div class="text-xl font-black text-on-surface uppercase leading-tight">Mūsų Architektūra</div>
+</div>
+</div>
+</div>
+<p class="text-[9px] text-outline leading-relaxed tracking-wider uppercase">
+                            Informacija perduodama tiesiogiai į strateginio valdymo centrą. Galimas vėlavimas dėl padidinto saugumo tikrinimo.
+                        </p>
+</div>
+</aside>
+</div>
+<!-- Dashboard Analytics Preview (Asymmetric Layout) -->
+<section class="mt-24 grid grid-cols-12 gap-8">
+<div class="col-span-3 bg-surface-container-low p-8 border-l border-tertiary/40">
+<div class="text-[10px] text-outline font-bold tracking-widest uppercase mb-4">Užklausų Kiekis (24H)</div>
+<div class="text-5xl font-black text-on-surface tnum mb-4">1,284</div>
+<div class="flex items-center gap-2 text-tertiary text-[10px] font-mono">
+<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span>
+                        +12.4% OPERACINIS_AUGIMAS
+                    </div>
+</div>
+<div class="col-span-9 grid grid-cols-3 gap-1">
+<div class="bg-surface-container-low p-6 flex flex-col justify-between">
+<span class="text-[9px] text-outline tracking-widest uppercase">Paskutinis Veiksmas</span>
+<div class="text-xs font-mono text-on-surface">VALYMAS_LOG_78</div>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-between">
+<span class="text-[9px] text-outline tracking-widest uppercase">Lokalizacija</span>
+<div class="text-xs font-mono text-on-surface">VILNIUS_COORD_54.6</div>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-between">
+<span class="text-[9px] text-outline tracking-widest uppercase">Užklausos Tipas</span>
+<div class="text-xs font-mono text-on-surface">PRIORITETAS_A1</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Technical Metadata Column -->
+<aside class="col-start-3 bg-surface-container-low border-l border-[#484848]/15 p-8 flex flex-col">
+<h3 class="text-[10px] font-bold tracking-[0.4em] uppercase text-on-surface-variant mb-10">TERMINAL_OUTPUT</h3>
+<div class="flex-grow font-mono text-[9px] text-on-surface-variant/60 space-y-2 overflow-hidden">
+<div class="text-tertiary">&gt; INITIALIZING_SECURE_HANDSHAKE...</div>
+<div>&gt; KEY_EXCHANGE_COMPLETED [RSA_4096]</div>
+<div>&gt; GEOLOCATION_STAMP_ATTACHED: 54.6872° N, 25.2797° E</div>
+<div>&gt; SYSTEM_ID: SOVEREIGN_ALPHA_NODE</div>
+<div>&gt; ENCRYPTION: AES_256_GCM</div>
+<div>&gt; SESSION_EXPIRY: 00:09:44</div>
+<div class="pt-4 border-t border-outline-variant/10">&gt; WAITING_FOR_USER_INPUT...</div>
+<div class="animate-pulse">_</div>
+</div>
+<div class="mt-auto space-y-6">
+<div class="p-4 bg-surface-container-high border-l-2 border-error">
+<div class="text-[10px] font-bold text-error uppercase mb-1">Avarinis Išėjimas</div>
+<p class="text-[9px] text-on-surface-variant uppercase leading-tight">Vieno paspaudimo sistemos išvalymas ir duomenų naikinimas.</p>
+</div>
+<button class="w-full py-3 bg-surface-container-lowest text-outline text-[10px] font-bold tracking-widest uppercase hover:bg-error/10 hover:text-error transition-colors border border-outline-variant/15">
+                    TERMINATE_SESSION
+                </button>
+</div>
+</aside>
+</div>
+<!-- Footer -->
+<footer class="w-full py-4 px-8 flex justify-between items-center bg-[#000000] border-t border-[#484848]/15 font-['Inter'] text-[9px] tracking-widest uppercase fixed bottom-0 z-50">
+<div class="text-[#acabaa]">
+            © 2024 THE SOVEREIGN INTELLIGENCE | ALL RIGHTS RESERVED | OPERATIONAL DISCLOSURE ALPHA-9
+        </div>
+<div class="flex gap-8">
+<a class="text-[#acabaa] hover:text-[#c9c6c5] transition-opacity" href="#">LEGAL</a>
+<a class="text-[#acabaa] hover:text-[#c9c6c5] transition-opacity" href="#">COMPLIANCE</a>
+<a class="text-[#acabaa] hover:text-[#c9c6c5] transition-opacity" href="#">DATA_PRIVACY</a>
+<a class="text-[#acabaa] hover:text-[#c9c6c5] transition-opacity" href="#">SYSTEM_ARCHITECTURE</a>
+</div>
+</footer>
+</body></html>

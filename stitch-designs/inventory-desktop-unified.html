@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="lt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SOVEREIGN_INTEL | Turto Inventorius</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#252626",
+                        "surface-container-highest": "#252626",
+                        "on-secondary-container": "#acc3ce",
+                        "secondary-fixed": "#cfe6f2",
+                        "on-primary-fixed": "#403f3f",
+                        "primary-fixed": "#e5e2e1",
+                        "inverse-primary": "#605f5e",
+                        "surface": "#0e0e0e",
+                        "tertiary": "#64acff",
+                        "surface-dim": "#0e0e0e",
+                        "on-secondary": "#0d232b",
+                        "primary-dim": "#bbb8b8",
+                        "on-surface-variant": "#acabaa",
+                        "tertiary-container": "#429efd",
+                        "tertiary-fixed": "#429efd",
+                        "secondary-dim": "#8ba1ac",
+                        "on-tertiary-fixed": "#000000",
+                        "background": "#0e0e0e",
+                        "on-tertiary-container": "#001e3b",
+                        "surface-container-lowest": "#000000",
+                        "secondary": "#8ba1ac",
+                        "inverse-surface": "#fcf8f8",
+                        "secondary-fixed-dim": "#c1d8e4",
+                        "on-error": "#490106",
+                        "on-secondary-fixed": "#2d424c",
+                        "on-primary-fixed-variant": "#5c5b5b",
+                        "secondary-container": "#293e48",
+                        "primary-fixed-dim": "#d7d4d3",
+                        "tertiary-fixed-dim": "#2f91ef",
+                        "on-error-container": "#ff9993",
+                        "outline": "#767575",
+                        "on-background": "#e7e5e4",
+                        "primary-container": "#474646",
+                        "tertiary-dim": "#47a1ff",
+                        "inverse-on-surface": "#565554",
+                        "surface-bright": "#2c2c2c",
+                        "error": "#ee7d77",
+                        "error-dim": "#bb5551",
+                        "surface-container-high": "#1f2020",
+                        "on-primary-container": "#d3d0cf",
+                        "surface-tint": "#c9c6c5",
+                        "on-primary": "#414040",
+                        "on-secondary-fixed-variant": "#495f69",
+                        "on-tertiary-fixed-variant": "#00284b",
+                        "surface-container": "#191a1a",
+                        "error-container": "#7f2927",
+                        "on-tertiary": "#002b50",
+                        "primary": "#c9c6c5",
+                        "on-surface": "#e7e5e4",
+                        "outline-variant": "#484848"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #000000;
+            color: #e7e5e4;
+            font-family: 'Inter', sans-serif;
+        }
+        .monolith-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1px;
+            background-color: #000000;
+        }
+        .data-mono {
+            font-feature-settings: "tnum" 1, "onum" 1;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopNavBar -->
+<header class="fixed top-0 z-50 w-full h-16 bg-[#0e0e0e] flex justify-between items-center px-6 border-b border-[#484848]/15 font-['Inter'] antialiased tracking-tight">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black tracking-tighter text-[#c9c6c5] uppercase">SOVEREIGN_INTEL</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[#acabaa] hover:text-[#e7e5e4] transition-colors uppercase text-[11px] font-bold tracking-widest" href="#">STRATEGY</a>
+<a class="text-[#c9c6c5] border-b-2 border-[#c9c6c5] pb-1 font-bold uppercase text-[11px] tracking-widest" href="#">ASSETS</a>
+<a class="text-[#acabaa] hover:text-[#e7e5e4] transition-colors uppercase text-[11px] font-bold tracking-widest" href="#">ADVISORY</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-[#1f2020] transition-all duration-150 text-[#c9c6c5]">
+<span class="material-symbols-outlined">settings_input_component</span>
+</button>
+<button class="p-2 hover:bg-[#1f2020] transition-all duration-150 text-[#c9c6c5]">
+<span class="material-symbols-outlined">sensors</span>
+</button>
+<button class="p-2 hover:bg-[#1f2020] transition-all duration-150 text-[#c9c6c5]">
+<span class="material-symbols-outlined">account_tree</span>
+</button>
+<div class="w-8 h-8 bg-surface-container-high border border-outline-variant/20 flex items-center justify-center">
+<img alt="Operational Command Avatar" class="w-full h-full object-cover" data-alt="Minimalist abstract portrait of a system operator in dark technical gear with subtle blue rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuehmKTFVEHgNz8hefX52qJ4YJF5J0LiALC20KtJZvr6dDjIvACHgZq7sjuHQhDcDnPNW5JT5Xa47zg8kfL8ebRY5OOewwCPj9TbaSkxyuuaO40Afy8zv4I9NLD3lkSxOGaFibA97cp6qQK3YQgkf1eIJBnCGF2ztKyFxnLSTppD9ktAx8Cn-finIXj3mY5V90xcTw0vKH0-w5K58T20dDhVgC0xSySdjsTuwYSDShSplMTSyJWDlmG8e25-QLRSpEj6pFBqwIL_M"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-[#131313] border-r border-[#484848]/15 flex flex-col pt-16 z-40 hidden md:flex">
+<div class="p-6 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-1.5 h-6 bg-tertiary"></div>
+<div>
+<h2 class="text-[#c9c6c5] font-black text-sm tracking-[0.2em]">NODE_01</h2>
+<p class="text-[9px] text-on-surface-variant tracking-[0.3em]">STRATEGIC_CORE</p>
+</div>
+</div>
+</div>
+<nav class="flex-grow space-y-[1px] bg-[#000000]">
+<a class="flex items-center gap-4 px-6 py-4 text-[#acabaa] hover:bg-[#1f2020] hover:text-[#e7e5e4] transition-colors duration-100 group" href="#">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span class="text-[11px] font-medium tracking-widest uppercase">COMMAND</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#acabaa] hover:bg-[#1f2020] hover:text-[#e7e5e4] transition-colors duration-100 group" href="#">
+<span class="material-symbols-outlined text-[20px]">insights</span>
+<span class="text-[11px] font-medium tracking-widest uppercase">STRATEGY</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 bg-[#1f2020] text-[#c9c6c5] border-l-2 border-[#64acff] transition-colors duration-100 group" href="#">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+<span class="text-[11px] font-medium tracking-widest uppercase">ASSETS</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#acabaa] hover:bg-[#1f2020] hover:text-[#e7e5e4] transition-colors duration-100 group" href="#">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+<span class="text-[11px] font-medium tracking-widest uppercase">ADVISORY</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#acabaa] hover:bg-[#1f2020] hover:text-[#e7e5e4] transition-colors duration-100 group" href="#">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<span class="text-[11px] font-medium tracking-widest uppercase">ARCHIVE</span>
+</a>
+</nav>
+<div class="mt-auto p-4 space-y-2 border-t border-outline-variant/10">
+<a class="flex items-center gap-3 px-2 py-2 text-[#acabaa] hover:text-white text-[10px] tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined text-sm">dns</span> SYSTEM_STATUS
+            </a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#acabaa] hover:text-error text-[10px] tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined text-sm">logout</span> LOGOUT
+            </a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="md:pl-64 pt-16 min-h-screen bg-surface">
+<!-- Header Section -->
+<section class="p-8 monolith-grid">
+<div class="col-span-12 md:col-span-8 mb-12">
+<h1 class="text-6xl font-black tracking-tighter uppercase mb-4 text-on-surface">TURTO INVENTORIUS</h1>
+<p class="text-on-surface-variant max-w-2xl text-sm leading-relaxed tracking-wide">
+                    Operatyvinis nekilnojamojo turto portfelio valdymas. Aukšto tankio duomenų apžvalga, apimanti gyvenamąsias erdves, sklypus ir architektūrinę dokumentaciją.
+                </p>
+</div>
+<div class="col-span-12 md:col-span-4 flex flex-col justify-end items-end gap-2 border-l border-outline-variant/20 pl-8 h-full">
+<div class="text-[10px] text-tertiary tracking-[0.3em] font-bold uppercase">PORTFOLIO_VALUE</div>
+<div class="text-4xl font-black data-mono text-on-surface">€842.12M</div>
+<div class="text-[10px] text-secondary tracking-widest">+12.4% FISCAL_YTD</div>
+</div>
+</section>
+<!-- Bento Grid Assets -->
+<section class="monolith-grid border-t border-outline-variant/15">
+<!-- Hero Asset: The Glass Pavilion -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-low p-0 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+<img alt="The Glass Pavilion" class="w-full h-[500px] object-cover grayscale brightness-50 group-hover:grayscale-0 transition-all duration-700" data-alt="Modern architectural glass pavilion in a dense dark forest at dusk, minimal linear lighting, sharp concrete edges, high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8gUyjdSU0EHs9hpxiqtWLi83Fdb1-Lp7xTUKg8ewYPp_6pjd9Xl4vlJDxhcR21j-G2e57bXN_7MuH1_vCkp9NlOfgw4sBRTBsDtFzRde_1yMwAtUpZJ5TKOefbmvCvjUk12HuEOvAnfqvg2WPVIvlmyb0b-7ow9ydG82CT3HgJD1cJTWpWdu65D4t6hiojPqnmOoeAqF3-mZcFQSrtsSnNn_VukNUVJrDqmT5XAddc2_uVdp9qplvO6aZ83TxJVTwUDuIgoiTZsI"/>
+<div class="absolute bottom-0 left-0 p-8 z-20 w-full">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-[10px] font-bold tracking-[0.4em] text-tertiary uppercase mb-2 block">RESIDENTIAL_CORE // SV-001</span>
+<h3 class="text-4xl font-black text-white uppercase tracking-tighter">THE GLASS PAVILION</h3>
+</div>
+<div class="text-right">
+<span class="text-[10px] text-on-surface-variant block mb-1 uppercase tracking-widest">ASSET_YIELD</span>
+<span class="text-2xl font-bold data-mono text-on-surface">7.21%</span>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-white/10 flex gap-12">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">GLA</p>
+<p class="text-lg font-bold data-mono">1,420 m²</p>
+</div>
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">STATUS</p>
+<p class="text-lg font-bold uppercase text-tertiary">OPERATIONAL</p>
+</div>
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">COORDINATES</p>
+<p class="text-lg font-bold data-mono">54.6872° N, 25.2797° E</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary High-Density Module: Technical Telemetry -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<h4 class="text-[11px] font-bold tracking-[0.2em] text-on-surface-variant uppercase mb-6 flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary animate-pulse"></span> SYSTEM_TELEMETRY
+                    </h4>
+<div class="space-y-6">
+<div class="flex justify-between items-center border-b border-outline-variant/10 pb-4">
+<span class="text-[10px] tracking-widest text-on-surface-variant uppercase">Market Volatility</span>
+<div class="flex items-end gap-1 h-8">
+<div class="w-1 bg-secondary/30 h-1/2"></div>
+<div class="w-1 bg-secondary/30 h-2/3"></div>
+<div class="w-1 bg-secondary h-full"></div>
+<div class="w-1 bg-secondary/50 h-3/4"></div>
+<div class="w-1 bg-secondary/20 h-1/4"></div>
+</div>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/10 pb-4">
+<span class="text-[10px] tracking-widest text-on-surface-variant uppercase">Occupancy Rate</span>
+<span class="text-xl font-bold data-mono">98.4%</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/10 pb-4">
+<span class="text-[10px] tracking-widest text-on-surface-variant uppercase">Energy Efficiency</span>
+<span class="text-xl font-bold data-mono text-tertiary">A++</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4">
+<p class="text-[9px] text-on-surface-variant leading-relaxed uppercase tracking-[0.15em] mb-4">Paskutinis auditas: 2024-Q3. Visi parametrai atitinka Alpha-9 saugumo protokolus.</p>
+<button class="w-full bg-primary text-on-primary py-3 font-bold text-[10px] tracking-[0.2em] uppercase hover:bg-primary-dim transition-colors">ATSISIŲSTI_ATASKAITĄ</button>
+</div>
+</div>
+<!-- Card Grid: Land Parcels & Arch Services -->
+<div class="col-span-12 lg:col-span-3 bg-surface-container-low p-6 flex flex-col justify-between border-r border-outline-variant/5">
+<div>
+<img alt="Phase IV Core" class="w-full h-48 object-cover grayscale mb-6" data-alt="Abstract aerial photography of a vast land plot with geometric construction outlines under a dark overcast sky, monochromatic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-pcvyqHeyiwwk8VzcaR5avcVEnQ2i5hZ_d1PX0xp4LtORukyepJ0zi_pMLN-xcmFJW_Oetqc_fVI0j9mV1_fwHI-HneBW_N2cV70XZLVEGafH14lV6mHX-a25ied9TIw4kqwsDtUz05RoW4PY72pLzQmg4t3Q-XMN72KBiBFtMQBpc_tlCk_2vREivWB7kNP3HBuIdtEEw59MIEousWQPjV6T3KYGr6LGEsL5TLlll_Z3LLCmLrwmkTL4GnZ7LaCoD4F86FRaPsI"/>
+<span class="text-[9px] font-bold text-secondary tracking-widest uppercase">ZONING // P4-C</span>
+<h5 class="text-lg font-black text-on-surface uppercase mb-2">PHASE IV CORE</h5>
+<p class="text-[11px] text-on-surface-variant leading-tight">Strateginis žemės sklypas Vilniaus technologijų centre. Leidimai išduoti.</p>
+</div>
+<div class="mt-8">
+<div class="flex justify-between text-[10px] border-b border-outline-variant/10 py-2">
+<span class="text-on-surface-variant uppercase">Area</span>
+<span class="font-bold data-mono">12.4 Ha</span>
+</div>
+<div class="flex justify-between text-[10px] border-b border-outline-variant/10 py-2">
+<span class="text-on-surface-variant uppercase">Cap Rate</span>
+<span class="font-bold data-mono text-tertiary">5.8%</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-3 bg-surface-container-low p-6 flex flex-col justify-between border-r border-outline-variant/5">
+<div>
+<img alt="Tower Delta" class="w-full h-48 object-cover grayscale mb-6" data-alt="Close-up of a sharp-edged skyscraper facade with metallic texture and reflective surfaces, dark mood, architectural brutalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi0HxvnALmuLzIAD73TOAG9iXcaKd6K8VIhuRIZinE3xcyfvQ3WR3860OcltmGDI4tQfjx5Mj9iqDzYP5etZyv2mI4GkEOCZVLXRAG0u7hfabjTJ0AQPpzvjDUJ7N0bZKexggNRZdDUAyE2UZ5YeH50wOds5Wp6FWZnvh9cX00QW24jYL0vEL8YLGvFhsHpgjthQ5QH2ecQDwBGnNiosnK10NN_SpQ9HBNmtTou9cJbTUSrmvg2UUyBaVNeZlTjfsbBFx5PmlkvnA"/>
+<span class="text-[9px] font-bold text-secondary tracking-widest uppercase">COMMERCIAL // TD-09</span>
+<h5 class="text-lg font-black text-on-surface uppercase mb-2">TOWER DELTA</h5>
+<p class="text-[11px] text-on-surface-variant leading-tight">Aukšto tankio biurų kompleksas su integruota išmaniąja infrastruktūra.</p>
+</div>
+<div class="mt-8">
+<div class="flex justify-between text-[10px] border-b border-outline-variant/10 py-2">
+<span class="text-on-surface-variant uppercase">Floors</span>
+<span class="font-bold data-mono">42</span>
+</div>
+<div class="flex justify-between text-[10px] border-b border-outline-variant/10 py-2">
+<span class="text-on-surface-variant uppercase">Occupancy</span>
+<span class="font-bold data-mono">92%</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-3 bg-surface-container-low p-6 flex flex-col justify-between border-r border-outline-variant/5">
+<div class="flex flex-col h-full justify-center text-center p-4 border-2 border-dashed border-outline-variant/20">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant mb-4">architecture</span>
+<h5 class="text-sm font-bold text-on-surface uppercase tracking-widest mb-2">ARCHITEKTŪRINĖS PASLAUGOS</h5>
+<p class="text-[10px] text-on-surface-variant leading-relaxed">Naujų projektų generavimas, BIM modeliavimas ir strateginis planavimas.</p>
+<button class="mt-6 border border-outline/30 hover:border-outline py-2 text-[9px] font-bold tracking-[0.2em] uppercase transition-all">PRADĖTI_PROJEKTĄ</button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-3 bg-surface-container-high p-8 flex flex-col justify-between">
+<div>
+<h5 class="text-xs font-black text-tertiary uppercase tracking-widest mb-4">SISTEMOS PRANEŠIMAS</h5>
+<div class="space-y-4">
+<div class="p-3 bg-surface-container-lowest border-l-2 border-tertiary">
+<p class="text-[9px] text-on-surface-variant uppercase tracking-widest mb-1">Alert: Yield Shift</p>
+<p class="text-[10px] text-on-surface">SV-001 pelningumas padidėjo +0.2%</p>
+</div>
+<div class="p-3 bg-surface-container-lowest border-l-2 border-outline-variant">
+<p class="text-[9px] text-on-surface-variant uppercase tracking-widest mb-1">Task: Document Update</p>
+<p class="text-[10px] text-on-surface">Atnaujinti Tower Delta gaisrinės saugos BIM.</p>
+</div>
+</div>
+</div>
+<div class="pt-6">
+<div class="flex items-center gap-2 text-[9px] text-on-surface-variant font-mono">
+<span class="w-1.5 h-1.5 bg-green-500 rounded-full shadow-[0_0_8px_#22c55e]"></span>
+                        SERVER_STATUS: OPTIMAL
+                    </div>
+</div>
+</div>
+</section>
+<!-- Detailed Inventory Table (High Density) -->
+<section class="p-8">
+<h3 class="text-xl font-black uppercase tracking-[0.3em] mb-8 flex items-center gap-4">
+                VISAS_INVENTORIUS <span class="h-px flex-grow bg-outline-variant/20"></span>
+</h3>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant/30">
+<th class="py-4 text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">ID</th>
+<th class="py-4 text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">OBJEKTAS</th>
+<th class="py-4 text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">TIPAS</th>
+<th class="py-4 text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">PLOTAS</th>
+<th class="py-4 text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">VERTĖ</th>
+<th class="py-4 text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">BŪSENA</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-5 text-[11px] font-mono text-tertiary">#INV-9901</td>
+<td class="py-5 text-[11px] font-bold text-on-surface uppercase tracking-widest">NORDIC_CORE_A</td>
+<td class="py-5 text-[11px] text-on-surface-variant uppercase">Residencial</td>
+<td class="py-5 text-[11px] font-mono">8,240 m²</td>
+<td class="py-5 text-[11px] font-mono">€42.4M</td>
+<td class="py-5"><span class="px-2 py-0.5 bg-tertiary/10 text-tertiary text-[9px] font-bold tracking-widest uppercase">ACTIVE</span></td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-5 text-[11px] font-mono text-tertiary">#INV-9902</td>
+<td class="py-5 text-[11px] font-bold text-on-surface uppercase tracking-widest">SUB_STATION_B</td>
+<td class="py-5 text-[11px] text-on-surface-variant uppercase">Infrastructure</td>
+<td class="py-5 text-[11px] font-mono">1,120 m²</td>
+<td class="py-5 text-[11px] font-mono">€18.1M</td>
+<td class="py-5"><span class="px-2 py-0.5 bg-on-surface-variant/10 text-on-surface-variant text-[9px] font-bold tracking-widest uppercase">MAINTENANCE</span></td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-5 text-[11px] font-mono text-tertiary">#INV-9903</td>
+<td class="py-5 text-[11px] font-bold text-on-surface uppercase tracking-widest">SKY_GARDEN_LOFTS</td>
+<td class="py-5 text-[11px] text-on-surface-variant uppercase">Residencial</td>
+<td class="py-5 text-[11px] font-mono">3,500 m²</td>
+<td class="py-5 text-[11px] font-mono">€29.8M</td>
+<td class="py-5"><span class="px-2 py-0.5 bg-tertiary/10 text-tertiary text-[9px] font-bold tracking-widest uppercase">ACTIVE</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-4 px-8 flex flex-col md:flex-row justify-between items-center bg-[#000000] border-t border-[#484848]/15 font-['Inter'] text-[9px] tracking-widest uppercase">
+<div class="text-[#acabaa] mb-4 md:mb-0">
+            © 2024 THE SOVEREIGN INTELLIGENCE | ALL RIGHTS RESERVED | OPERATIONAL DISCLOSURE ALPHA-9
+        </div>
+<nav class="flex gap-6">
+<a class="text-[#acabaa] hover:text-white transition-opacity" href="#">LEGAL</a>
+<a class="text-[#acabaa] hover:text-white transition-opacity" href="#">COMPLIANCE</a>
+<a class="text-[#acabaa] hover:text-white transition-opacity" href="#">DATA_PRIVACY</a>
+<a class="text-[#acabaa] hover:text-white transition-opacity" href="#">SYSTEM_ARCHITECTURE</a>
+</nav>
+</footer>
+</body></html>

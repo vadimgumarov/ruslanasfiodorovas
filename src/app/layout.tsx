@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin", "latin-ext"],
 });
 
 export const metadata: Metadata = {
-  title: "Ruslanas Fiodorovas - Real Estate Expert",
+  title: "SOVEREIGN_INTEL | Ruslanas Fiodorovas",
   description:
-    "Strategic real estate operations, asset inventory, market intelligence, advisory, and valuation services.",
+    "Strateginės nekilnojamojo turto operacijos. Turto inventorius, rinkos žvalgyba, konsultacijos ir vertinimas.",
 };
 
 export default function RootLayout({
@@ -19,8 +19,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="lt" className={`${inter.variable} dark h-full antialiased`}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
+        />
+      </head>
+      <body className="min-h-full flex flex-col bg-lowest">{children}</body>
     </html>
   );
 }
